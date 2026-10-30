@@ -1,0 +1,16 @@
+[package]
+name = "rsnowy"
+version = "0.1.0"
+edition = "2024"
+license = "GPL-3"
+
+[dependencies]
+crossterm = "0.29.0"
+rand = "0.10.3"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
